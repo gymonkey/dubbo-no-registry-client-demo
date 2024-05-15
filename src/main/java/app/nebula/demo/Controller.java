@@ -11,6 +11,11 @@ public class Controller {
     @Autowired
     private GreetingsService greetingsService;
 
+    @GetMapping("/")
+    public String root(){
+        return "ok";
+    }
+
     @GetMapping("/invoke")
     public String invoke(){
         System.out.println("invoke rpc provider");
